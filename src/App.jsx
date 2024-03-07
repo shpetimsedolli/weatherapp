@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import axios from "axios";
+import Weather from "./components/Weather";
 
 function App() {
   const [data, setData] = useState({});
@@ -31,6 +32,7 @@ function App() {
           onKeyDownCapture={searchLocation}
         />
       </div>
+      <Weather weatherData={data} />
     </div>
   );
 }
